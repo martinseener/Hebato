@@ -1,7 +1,8 @@
 language: bash
 
-before_script:
-    - apt-get -y install shellcheck
+before_install:
+    - sudo apt-get -qq update
+    - sudo apt-get -y install shellcheck
 
 script:
 - shellcheck tests/shellcheck.sh
