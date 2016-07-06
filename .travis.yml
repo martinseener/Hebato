@@ -6,6 +6,7 @@ before_install:
     - echo "deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse" > /etc/apt/sources.list.d/trusty-backports.list
     - sudo apt-get -qq update
     - sudo apt-get -t trusty-backports install shellcheck
+    - sudo pip install bashate
 
 script:
 - shellcheck tests/shellcheck.sh
