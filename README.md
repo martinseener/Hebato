@@ -2,6 +2,8 @@
 
 Hebato is a simple Bash Script for automating client-side encrypted backups on Hetzner's Backup Space or Storage Boxes using SSHFS and EncFS.
 
+Build Status: [![Build Status](https://travis-ci.org/martinseener/Hebato.svg)](https://travis-ci.org/martinseener/Hebato)
+
 ## Why SSHFS and EncFS?
 
 There are 2 simple reasons: While using SSHFS we can use tools like rsync/rdiff-backup (with --no-hard-links option!) to backup files
