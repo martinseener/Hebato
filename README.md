@@ -1,11 +1,11 @@
 # Hebato - Hetzner Backup Tool
 
-Hebato is a simple Bash Script for automating client-side encrypted backups on Hetzner's Backup Space using SSHFS and EncFS.
+Hebato is a simple Bash Script for automating client-side encrypted backups on Hetzner's Backup Space or Storage Boxes using SSHFS and EncFS.
 
 ## Why SSHFS and EncFS?
 
 There are 2 simple reasons: While using SSHFS we can use tools like rsync/rdiff-backup (with --no-hard-links option!) to backup files
-which would be a pain to use with plain sftp/scp or ftp and because SSHFS uses a secure transport channel by default.
+which would be a pain to use with plain sftp/scp or ftp and because SSHFS uses a secure transport channel by default and mounts the path as a normal directory.
 
 EncFS is our client-side data encryption layer. After we mount the Backup Space via SSHFS, we "double-mount" this path to another path
 using EncFS which then en- and decrypts data between the SSHFS mount path and the EncFS mount path "on-the-fly". You can read and write data
@@ -17,7 +17,7 @@ I'm glad you asked that. It's damn easy! Just copy the hebato.sh script into you
 Now get into the script and change the parameters like your Hetzners Username and the mount paths you want to use. You don't even have to care about the EncFS
 encryption key. The script will handle that automatically for you without exposing your super secret key anywhere (check the sources!).
 
-What you need to do anyways is enabling the ability for your root user to login to the Backup Space just with a SSH keypair. Check this [tutorial](http://wiki.hetzner.de/index.php/Backup_Space_SSH_Keys/en) on how to do that.
+What you need to do anyways is enabling the ability for your root user to login to the Backup- or Storage-Space just with a SSH keypair. Check this [tutorial](http://wiki.hetzner.de/index.php/Backup_Space_SSH_Keys/en) on how to do that. It will work for Storage-Boxes like it does for Backup-Boxes. Hebato will probably handle that in the future as well.
 
 ### Where can i put my backup scripts or commands?
 
@@ -49,7 +49,7 @@ all this for everyone's use. There is also a blog post with more detailed steps 
 
 ## Copyright and License
 
-This little tool was made by Martin Seener (c) 2014
-Feel free to contribute! Use feature branches for new stuff or bugfixes before you submit them to me! And please sign-off your commits!
+This little tool was made by Martin Seener (c) 2014-2016
+Feel free to contribute! Use feature branches for new stuff or bugfixes before you submit them to me!
 
-Released under the GNU GPLv2
+Released under the MIT License. License file is attached in this repository.
