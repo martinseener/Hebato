@@ -9,5 +9,5 @@ before_install:
     - sudo pip install bashate
 
 script:
-- shellcheck tests/shellcheck.sh
-- bashate tests/bashate.sh
+- /bin/bash tests/shellcheck.sh
+- /bin/bash tests/bashate.sh
