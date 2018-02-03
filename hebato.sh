@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Hebato - Hetzner Backup Tool
-# v1.0 (c) 2014-2016 Martin Seener (martin@seener.de)
+# v1.0-archived (c) 2014 - 2018 Martin Seener (martin@sysorchestra.com)
 
 set -e
 

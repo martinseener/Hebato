@@ -1,8 +1,12 @@
-# Hebato - Hetzner Backup Tool
+# Hebato - Hetzner Backup Tool - Archived!
 
 Hebato is a simple Bash Script for automating client-side encrypted backups on Hetzner's Backup Space or Storage Boxes using SSHFS and EncFS.
 
 Build Status: [![Build Status](https://travis-ci.org/martinseener/Hebato.svg)](https://travis-ci.org/martinseener/Hebato)
+
+## DEPRECATION WARNING
+
+Since there are many better tools out there since the inception of Hebato, that can be used with Hetzner Backup Storage or Storage Boxes much more easily via SFTP, for example [restic](https://restic.net), i decided to abandon this Project from today. I now also use restic for backups myself since it's more actively developed and it's faster. If you still use Hebato and it works for you, great. I'll leave this project here as an archive.
 
 ## Why SSHFS and EncFS?
 
